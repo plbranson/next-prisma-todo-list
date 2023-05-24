@@ -25,7 +25,6 @@ function generateTodoList() {
 
 async function toggleTodoList(id: string, complete: boolean) {
   'use server';
-
   await prisma.todo.update({ where: { id }, data: { complete } });
 }
 
